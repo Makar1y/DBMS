@@ -1,0 +1,1 @@
+-- Kiekvienai leidyklai skaičius skaitytojų, skaitančių bent vieną joje išleistą knygą.

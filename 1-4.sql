@@ -1,0 +1,2 @@
+-- Vardas ir pavardė autoriaus, kurio knygų egzempliorių bibliotekoje yra daugiausiai.
+-- Greta pateikti ir to autoriaus visų knygų bei visų egzempliorių skaičius.
