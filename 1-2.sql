@@ -6,7 +6,3 @@
 
 SELECT DISTINCT Vardas, Pavarde 
 FROM stud.Autorius JOIN stud.Knyga ON Autorius.ISBN = Knyga.ISBN
-
-
--- WHERE Skaitymas.Grazinta IS NULL
---     AND Skaitymas.Grazinti < DATE '2025-01-01'
