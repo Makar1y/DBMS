@@ -1,7 +1,4 @@
-Select *
+SELECT Table_Schema, Table_Name, Data_Type
+    FROM information_schema.columns
 
-    FROM Stud.Knyga 
-    JOIN Stud.Autorius ON Autorius.ISBN = Knyga.ISBN
-    JOIN Stud.Egzempliorius ON Knyga.ISBN = Egzempliorius.ISBN
-
-    WHERE Pavarde = 'Petraitis' AND Vardas = 'Jonas'
+    GROUP BY Table_Schema, Table_Name, Data_Type

@@ -10,5 +10,5 @@ Select Vardas, Pavarde,
     LEFT OUTER JOIN Stud.Egzempliorius ON Autorius.ISBN = Egzempliorius.ISBN
 
     GROUP BY Vardas, Pavarde
-    ORDER BY COUNT(Egzempliorius.Nr) DESC, COUNT(DISTINCT Knyga.ISBN) DESC
+    ORDER BY "Egzemplioriu sk." DESC -- , "Knygu sk." DESC
     LIMIT 1
