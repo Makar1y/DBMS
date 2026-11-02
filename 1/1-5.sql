@@ -6,4 +6,4 @@ SELECT Table_Schema, Table_Name, Data_Type, Count(*) AS "Stulpelių sk."
     WHERE Data_Type = 'integer'
 
     GROUP BY Table_Schema, Table_Name, Data_Type
-    ORDER BY "Stulpelių sk." DESC
+    -- ORDER BY "Stulpelių sk." DESC
