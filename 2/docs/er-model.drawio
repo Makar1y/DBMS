@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="ER modelis" name="ER modelis">
-        <mxGraphModel dx="769" dy="621" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1480" math="0" shadow="0">
+        <mxGraphModel dx="1692" dy="1366" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1480" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -144,7 +144,7 @@
                 <mxCell id="c59" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;fontStyle=0;" value="Registration nr" vertex="1">
                     <mxGeometry height="50" width="173.20000000000002" x="1600" y="445" as="geometry"/>
                 </mxCell>
-                <mxCell id="c60" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;fontStyle=0;" value="Mark" vertex="1">
+                <mxCell id="c60" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;fontStyle=0;" value="Brand" vertex="1">
                     <mxGeometry height="50" width="108" x="1720" y="529" as="geometry"/>
                 </mxCell>
                 <mxCell id="c61" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;fontStyle=0;" value="Model" vertex="1">
@@ -238,10 +238,10 @@
                         <mxPoint x="691" y="1263" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="aqBb0Von9WemSLTnu3T5-43" parent="1" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;fontStyle=0;" value="Categories" vertex="1">
+                <mxCell id="aqBb0Von9WemSLTnu3T5-43" parent="1" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;fontStyle=0;" value="Driving categories" vertex="1">
                     <mxGeometry height="64" width="183" x="150" y="426" as="geometry"/>
                 </mxCell>
-                <mxCell id="odsOnulFW8q7jtVL8Hvq-5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;fontStyle=0;" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Category&lt;/span&gt;" vertex="1">
+                <mxCell id="odsOnulFW8q7jtVL8Hvq-5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;fontStyle=0;" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Required category&lt;/span&gt;" vertex="1">
                     <mxGeometry height="50" width="192.8" x="1390" y="426" as="geometry"/>
                 </mxCell>
                 <mxCell id="odsOnulFW8q7jtVL8Hvq-7" edge="1" parent="1" source="aqBb0Von9WemSLTnu3T5-43" style="edgeStyle=none;html=1;strokeWidth=2;endArrow=none;endFill=0;" target="c38">
