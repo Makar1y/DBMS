@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="ER modelis" name="ER modelis">
-        <mxGraphModel dx="1692" dy="1366" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1480" math="0" shadow="0">
+        <mxGraphModel dx="1134" dy="915" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1480" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -96,7 +96,7 @@
                 <mxCell id="aqBb0Von9WemSLTnu3T5-11" edge="1" parent="1" source="c49" style="edgeStyle=none;html=1;endArrow=none;endFill=0;strokeWidth=2;" target="c38">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="c49" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;fontStyle=0;" value="Phone nr" vertex="1">
+                <mxCell id="c49" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;fontStyle=0;" value="Phone" vertex="1">
                     <mxGeometry height="50" width="124.2" x="63.8" y="710" as="geometry"/>
                 </mxCell>
                 <mxCell id="aqBb0Von9WemSLTnu3T5-12" edge="1" parent="1" source="c50" style="edgeStyle=none;html=1;endArrow=none;endFill=0;strokeWidth=2;" target="c38">
@@ -126,13 +126,13 @@
                 <mxCell id="aqBb0Von9WemSLTnu3T5-5" edge="1" parent="1" source="c55" style="edgeStyle=none;html=1;endArrow=none;endFill=0;strokeWidth=2;" target="c39">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="c55" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;fontStyle=0;" value="Start" vertex="1">
+                <mxCell id="c55" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;fontStyle=0;" value="Start time" vertex="1">
                     <mxGeometry height="50" width="108" x="910" y="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="aqBb0Von9WemSLTnu3T5-6" edge="1" parent="1" source="c56" style="edgeStyle=none;html=1;endArrow=none;endFill=0;strokeWidth=2;" target="c39">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="c56" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;fontStyle=0;" value="End" vertex="1">
+                <mxCell id="c56" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;fontStyle=0;" value="End time" vertex="1">
                     <mxGeometry height="50" width="108" x="1080" y="190" as="geometry"/>
                 </mxCell>
                 <mxCell id="aqBb0Von9WemSLTnu3T5-1" edge="1" parent="1" source="c57" style="edgeStyle=none;html=1;endArrow=none;endFill=0;strokeWidth=2;" target="c39">
@@ -150,8 +150,8 @@
                 <mxCell id="c61" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;fontStyle=0;" value="Model" vertex="1">
                     <mxGeometry height="50" width="108" x="1750" y="600" as="geometry"/>
                 </mxCell>
-                <mxCell id="c62" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;fontStyle=0;" value="Year" vertex="1">
-                    <mxGeometry height="50" width="108" x="1690" y="740" as="geometry"/>
+                <mxCell id="c62" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;fontStyle=0;" value="Production Year" vertex="1">
+                    <mxGeometry height="50" width="130" x="1690" y="740" as="geometry"/>
                 </mxCell>
                 <mxCell id="c63" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;fontStyle=0;" value="Status" vertex="1">
                     <mxGeometry height="50" width="108" x="1628" y="814" as="geometry"/>
