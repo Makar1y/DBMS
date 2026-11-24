@@ -1,10 +1,10 @@
 -- ---------------------------------------------------------------------
--- 5. Dalykinės taisyklės trigeriais
+-- 5. Trigeriai
 -- ---------------------------------------------------------------------
 
 -- 5.1. Vieno automobilio aktyvios rezervacijos negali persidengti.
 CREATE OR REPLACE FUNCTION fn_reservation_no_overlap()
-RETURNS trigger
+RETURNS TRIGGER
 LANGUAGE plpgsql
 AS $$
 BEGIN
@@ -24,7 +24,7 @@ BEGIN
         RAISE EXCEPTION
             'Automobilis % jau turi aktyvią rezervaciją, persidengiančią su [%, %)',
             NEW.car_id, NEW.start_time, NEW.end_time
-            USING ERRCODE = 'P0001';
+            USING ERRCODE = 'E0001';
     END IF;
 
     RETURN NEW;
@@ -40,7 +40,7 @@ EXECUTE FUNCTION fn_reservation_no_overlap();
 -- 5.2. Klientas gali rezervuoti tik tos kategorijos automobilį,
 --      kurios vairuotojo pažymėjimo kategoriją jis turi.
 CREATE OR REPLACE FUNCTION fn_reservation_category()
-RETURNS trigger
+RETURNS TRIGGER
 LANGUAGE plpgsql
 AS $$
 DECLARE
@@ -53,7 +53,7 @@ BEGIN
 
     IF v_required_category IS NULL THEN
         RAISE EXCEPTION 'Automobilis % neegzistuoja', NEW.car_id
-            USING ERRCODE = '23503';
+            USING ERRCODE = 'E0002';
     END IF;
 
     IF NOT EXISTS (
@@ -65,7 +65,7 @@ BEGIN
         RAISE EXCEPTION
             'Klientas % neturi reikalingos % kategorijos automobiliui %',
             NEW.client_id, v_required_category, NEW.car_id
-            USING ERRCODE = 'P0001';
+            USING ERRCODE = 'E0003';
     END IF;
 
     RETURN NEW;

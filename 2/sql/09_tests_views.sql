@@ -12,7 +12,7 @@ ORDER BY car_id;
 \echo '--- v_client_reservation_summary ---'
 SELECT client_id, name, surname, total_reservations,
        active_reservations, completed_reservations,
-       cancelled_reservations, no_show_reservations
+       cancelled_reservations
 FROM v_client_reservation_summary
 ORDER BY client_id;
 
@@ -22,6 +22,6 @@ REFRESH MATERIALIZED VIEW CONCURRENTLY mv_car_reservation_stats;
 \echo '--- mv_car_reservation_stats ---'
 SELECT car_id, registration_nr, total_reservations,
        active_reservations, completed_reservations,
-       cancelled_reservations, no_show_reservations
+       cancelled_reservations
 FROM mv_car_reservation_stats
 ORDER BY car_id;

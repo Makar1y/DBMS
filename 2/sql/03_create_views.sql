@@ -28,8 +28,8 @@ SELECT ca.id AS car_id,
        l.name AS location_name,
        l.city,
        l.address,
-       cl.from_time,
-       cl.to_time
+       cl.from_time
+    --    cl.to_time
 FROM car ca
 JOIN car_location cl ON cl.car_id = ca.id AND cl.to_time IS NULL
 JOIN location l      ON l.id = cl.location_id;
@@ -42,8 +42,7 @@ SELECT c.id AS client_id,
        COUNT(r.id) AS total_reservations,
        COUNT(*) FILTER (WHERE r.status = 'active')    AS active_reservations,
        COUNT(*) FILTER (WHERE r.status = 'completed') AS completed_reservations,
-       COUNT(*) FILTER (WHERE r.status = 'cancelled') AS cancelled_reservations,
-       COUNT(*) FILTER (WHERE r.status = 'no_show')   AS no_show_reservations
+       COUNT(*) FILTER (WHERE r.status = 'cancelled') AS cancelled_reservations
 FROM client c
 LEFT JOIN reservation r ON r.client_id = c.id
 GROUP BY c.id, c.name, c.surname, c.email;

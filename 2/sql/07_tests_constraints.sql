@@ -1,4 +1,4 @@
--- 1. Neteisingas el. pašto formatas (CHECK ... ~*)
+-- 1. Neteisingas el. pašto formatas
 DO $$
 BEGIN
     INSERT INTO client (name, surname, email)

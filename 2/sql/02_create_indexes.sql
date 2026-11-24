@@ -3,11 +3,11 @@
 --    Bent vienas unikalus ir bent vienas neunikalus.
 -- ---------------------------------------------------------------------
 
--- Unikalus, kiekį nepriklausantis nuo didžiųjų/mažųjų raidžių.
-CREATE UNIQUE INDEX ux_client_email_lower
+
+CREATE UNIQUE INDEX uix_client_email_lower
     ON client (lower(email));
 
--- Neunikalūs indeksai, naudojami paieškai ir trigerių patikroms.
+
 CREATE INDEX ix_reservation_car_start
     ON reservation (car_id, start_time);
 

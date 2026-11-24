@@ -1,6 +1,6 @@
 -- Indeksai (materializuotosios lentelės indeksas — prieš pat lentelę)
-DROP INDEX IF EXISTS ux_mv_car_reservation_stats_car_id;
-DROP INDEX IF EXISTS ux_client_email_lower;
+DROP INDEX IF EXISTS uix_mv_car_reservation_stats_car_id;
+DROP INDEX IF EXISTS uix_client_email_lower;
 DROP INDEX IF EXISTS ix_reservation_car_start;
 DROP INDEX IF EXISTS ix_reservation_client_start;
 DROP INDEX IF EXISTS ix_car_location_location_time;
@@ -12,13 +12,8 @@ DROP VIEW IF EXISTS v_car_current_location CASCADE;
 DROP VIEW IF EXISTS v_client_reservation_summary CASCADE;
 
 -- Triggiai (aiškiai, prieš ištrinant lenteles; saugu ir kartojant)
-DO $$
-BEGIN
-    IF to_regclass('reservation') IS NOT NULL THEN
-        EXECUTE 'DROP TRIGGER IF EXISTS trg_reservation_no_overlap ON reservation';
-        EXECUTE 'DROP TRIGGER IF EXISTS trg_reservation_category ON reservation';
-    END IF;
-END $$;
+DROP TRIGGER IF EXISTS trg_reservation_no_overlap ON reservation;
+DROP TRIGGER IF EXISTS trg_reservation_category ON reservation;
 
 -- Lentelės
 DROP TABLE IF EXISTS car_location CASCADE;
