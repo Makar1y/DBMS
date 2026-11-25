@@ -5,7 +5,7 @@ BEGIN
     VALUES ('Test', 'Email', 'not-an-email');
     RAISE EXCEPTION 'TEST FAILED: neteisingas el. paštas buvo priimtas';
 EXCEPTION WHEN check_violation THEN
-    RAISE NOTICE 'OK: neteisingas el. pašto formatas atmestas';
+    RAISE NOTICE 'OK!';
 END $$;
 
 -- 2. El. pašto unikalumas nepriklausomai nuo raidžių (unikalus indeksas)
@@ -15,10 +15,10 @@ BEGIN
     VALUES ('Test', 'Duplicate', 'JONAS.JONAITIS@EXAMPLE.COM');
     RAISE EXCEPTION 'TEST FAILED: pasikartojantis el. paštas buvo priimtas';
 EXCEPTION WHEN unique_violation THEN
-    RAISE NOTICE 'OK: el. pašto unikalumas (lower) suveikė';
+    RAISE NOTICE 'OK!';
 END $$;
 
--- 3. Neigiama kaina (CHECK ... >)
+-- 3. Neigiama kaina
 DO $$
 BEGIN
     INSERT INTO car
@@ -27,7 +27,7 @@ BEGIN
         ('B', 'TST-001', 'Test', 'Bad price', 2020, -1);
     RAISE EXCEPTION 'TEST FAILED: neigiama kaina buvo priimta';
 EXCEPTION WHEN check_violation THEN
-    RAISE NOTICE 'OK: neigiama automobilio kaina atmesta';
+    RAISE NOTICE 'OK!';
 END $$;
 
 -- 4. Neteisinga automobilio būsena (CHECK ... IN)
@@ -39,7 +39,7 @@ BEGIN
         ('B', 'TST-002', 'Test', 'Bad status', 2020, 10, 'unknown');
     RAISE EXCEPTION 'TEST FAILED: neteisinga automobilio būsena buvo priimta';
 EXCEPTION WHEN check_violation THEN
-    RAISE NOTICE 'OK: neteisinga automobilio būsena atmesta';
+    RAISE NOTICE 'OK!';
 END $$;
 
 -- 5. Rezervacijos pabaiga anksčiau už pradžią (CHECK ... >)
@@ -49,7 +49,7 @@ BEGIN
     VALUES (1, 1, '2026-12-01 10:00', '2026-12-01 09:00');
     RAISE EXCEPTION 'TEST FAILED: neteisingas rezervacijos laikotarpis buvo priimtas';
 EXCEPTION WHEN check_violation THEN
-    RAISE NOTICE 'OK: rezervacijos laikotarpis (end > start) patikrintas';
+    RAISE NOTICE 'OK!';
 END $$;
 
 -- 6. Neteisingas buvimo vietos laikotarpis (CHECK)
@@ -59,7 +59,7 @@ BEGIN
     VALUES (1, 1, '2026-12-03 10:00', '2026-12-03 09:00');
     RAISE EXCEPTION 'TEST FAILED: neteisingas car_location laikotarpis buvo priimtas';
 EXCEPTION WHEN check_violation THEN
-    RAISE NOTICE 'OK: car_location laikotarpis patikrintas';
+    RAISE NOTICE 'OK!';
 END $$;
 
 -- 7. Pasikartojantis daugiareikšmio atributo įrašas (PK)
@@ -69,7 +69,7 @@ BEGIN
     VALUES (1, 'B');
     RAISE EXCEPTION 'TEST FAILED: pasikartojanti kategorija buvo priimta';
 EXCEPTION WHEN unique_violation THEN
-    RAISE NOTICE 'OK: pasikartojanti kliento kategorija atmesta';
+    RAISE NOTICE 'OK!';
 END $$;
 
 -- 8. Neegzistuojantis klientas (FK)
@@ -79,7 +79,7 @@ BEGIN
     VALUES (999, 'B');
     RAISE EXCEPTION 'TEST FAILED: neegzistuojantis klientas buvo priimtas';
 EXCEPTION WHEN foreign_key_violation THEN
-    RAISE NOTICE 'OK: neegzistuojantis klientas atmestas';
+    RAISE NOTICE 'OK!';
 END $$;
 
 -- 9. Privalomas laukas negali būti NULL (NOT NULL)
@@ -89,7 +89,7 @@ BEGIN
     VALUES ('Test', 'Null', NULL);
     RAISE EXCEPTION 'TEST FAILED: NULL el. paštas buvo priimtas';
 EXCEPTION WHEN not_null_violation THEN
-    RAISE NOTICE 'OK: NULL el. paštas atmestas';
+    RAISE NOTICE 'OK!';
 END $$;
 
 -- 10. Numatytosios reikšmės
@@ -108,7 +108,7 @@ BEGIN
         RAISE EXCEPTION 'TEST FAILED: car.status numatytoji reikšmė yra %', v_status;
     END IF;
 
-    RAISE NOTICE 'OK: car.status numatytoji reikšmė = %', v_status;
+    RAISE NOTICE 'OK!';
     DELETE FROM car WHERE id = v_car_id;
 END $$;
 
@@ -125,6 +125,6 @@ BEGIN
         RAISE EXCEPTION 'TEST FAILED: reservation.status numatytoji reikšmė yra %', v_status;
     END IF;
 
-    RAISE NOTICE 'OK: reservation.status numatytoji reikšmė = %', v_status;
+    RAISE NOTICE 'OK!';
     DELETE FROM reservation WHERE id = v_reservation_id;
 END $$;

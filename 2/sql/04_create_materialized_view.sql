@@ -13,7 +13,7 @@ SELECT car.id AS car_id,
        COUNT(*) FILTER (WHERE r.status = 'cancelled') AS cancelled_reservations
 FROM car
 LEFT JOIN reservation r ON r.car_id = car.id
-GROUP BY car.id, car.registration_nr, car.brand, car.model;
+GROUP BY car.id;
 
 -- CONCURRENTLY requirement 
 CREATE UNIQUE INDEX uix_mv_car_reservation_stats_car_id

@@ -2,9 +2,9 @@ BEGIN;
 
 -- Klientai
 INSERT INTO client (name, surname, email, phone, city, street, home_nr) VALUES
-    ('Jonas',  'Jonaitis',  'jonas.jonaitis@example.com',  '+37060000001', 'Vilnius',  'Gedimino',  '1'),
-    ('Ona',    'Onaitė',    'ona.onaite@example.com',      '+37060000002', 'Kaunas',   'Laisvės',   '2'),
-    ('Petras', 'Petraitis', 'petras.petraitis@example.com', '+37060000003', 'Klaipėda', 'Baltijos',  '3');
+    ('Jonas',  'Jonaitis',  'jonas.jonaitis@example.com',  '+37060000001', 'Vilnius',  'Gedimino',  1),
+    ('Ona',    'Onaitė',    'ona.onaite@example.com',      '+37060000002', 'Kaunas',   'Laisvės',   1),
+    ('Petras', 'Petraitis', 'petras.petraitis@example.com', '+37060000003', 'Klaipėda', 'Baltijos',  3);
 
 -- Klientų vairuotojo pažymėjimo kategorijos
 INSERT INTO client_category (client_id, category) VALUES

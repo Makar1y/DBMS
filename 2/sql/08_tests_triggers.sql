@@ -1,24 +1,24 @@
--- 1. Persidengiančios aktyvios rezervacijos (triggeris)
+-- 1. Persidengiančios aktyvios rezervacijos
 DO $$
 BEGIN
     INSERT INTO reservation (client_id, car_id, start_time, end_time)
     VALUES (1, 1, '2026-11-20 11:00', '2026-11-20 13:00');
     RAISE EXCEPTION 'TEST FAILED: persidengianti rezervacija buvo priimta';
 EXCEPTION WHEN raise_exception THEN
-    RAISE NOTICE 'OK: persidengianti aktyvi rezervacija atmesta';
+    RAISE NOTICE 'OK!';
 END $$;
 
--- 2. Klientas neturi reikiamos kategorijos (triggeris)
+-- 2. Klientas neturi reikiamos kategorijos
 DO $$
 BEGIN
     INSERT INTO reservation (client_id, car_id, start_time, end_time)
     VALUES (2, 3, '2026-12-02 09:00', '2026-12-02 10:00');
     RAISE EXCEPTION 'TEST FAILED: rezervacija be reikiamos kategorijos buvo priimta';
 EXCEPTION WHEN raise_exception THEN
-    RAISE NOTICE 'OK: rezervacija be reikiamos kategorijos atmesta';
+    RAISE NOTICE 'OK!';
 END $$;
 
--- 3. Persidengimas atnaujinant esamą rezervaciją (triggeris)
+-- 3. Persidengimas atnaujinant esamą rezervaciją
 DO $$
 BEGIN
     UPDATE reservation
@@ -27,5 +27,5 @@ BEGIN
      WHERE id = 4;
     RAISE EXCEPTION 'TEST FAILED: persidengiantis UPDATE buvo priimtas';
 EXCEPTION WHEN raise_exception THEN
-    RAISE NOTICE 'OK: persidengiantis rezervacijos UPDATE atmestas';
+    RAISE NOTICE 'OK!';
 END $$;
