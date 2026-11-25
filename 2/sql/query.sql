@@ -1,1 +1,3 @@
-REFRESH MATERIALIZED VIEW CONCURRENTLY mv_car_reservation_stats
+SET search_path TO masi2289, public;
+
+SELECT count(*) FROM client 
