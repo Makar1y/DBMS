@@ -6,7 +6,7 @@ INSERT INTO client (name, surname, email, phone, city, street, home_nr) VALUES
     ('Ona',    'Onaitė',    'ona.onaite@example.com',      '+37060000002', 'Kaunas',   'Laisvės',   1),
     ('Petras', 'Petraitis', 'petras.petraitis@example.com', '+37060000003', 'Klaipėda', 'Baltijos',  3);
 
--- Klientų vairuotojo pažymėjimo kategorijos
+-- Klientų kategorijos
 INSERT INTO client_category (client_id, category) VALUES
     (1, 'B'),
     (1, 'BE'),
@@ -29,7 +29,7 @@ VALUES
     ('C1', 'CCC-003', 'Ford',   'Transit', 2019, 0.40, 'available'),
     ('B',  'DDD-004', 'Tesla',  'Model 3', 2022, 0.50, 'maintenance');
 
--- Automobilių buvimo vietų istorija
+-- Automobilių vietų istorija
 INSERT INTO car_location (car_id, location_id, from_time, to_time) VALUES
     (1, 1, '2026-11-01 08:00', '2026-11-01 18:00'),
     (1, 2, '2026-11-01 18:00', NULL),

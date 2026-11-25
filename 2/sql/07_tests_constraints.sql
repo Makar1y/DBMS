@@ -8,7 +8,7 @@ EXCEPTION WHEN check_violation THEN
     RAISE NOTICE 'OK!';
 END $$;
 
--- 2. El. pašto unikalumas nepriklausomai nuo raidžių (unikalus indeksas)
+-- 2. El. pašto unikalumas nepriklausomai nuo raidžių
 DO $$
 BEGIN
     INSERT INTO client (name, surname, email)
@@ -30,7 +30,7 @@ EXCEPTION WHEN check_violation THEN
     RAISE NOTICE 'OK!';
 END $$;
 
--- 4. Neteisinga automobilio būsena (CHECK ... IN)
+-- 4. Neteisinga automobilio būsena
 DO $$
 BEGIN
     INSERT INTO car
@@ -42,7 +42,7 @@ EXCEPTION WHEN check_violation THEN
     RAISE NOTICE 'OK!';
 END $$;
 
--- 5. Rezervacijos pabaiga anksčiau už pradžią (CHECK ... >)
+-- 5. Rezervacijos pabaiga anksčiau už pradžią
 DO $$
 BEGIN
     INSERT INTO reservation (client_id, car_id, start_time, end_time)
@@ -52,7 +52,7 @@ EXCEPTION WHEN check_violation THEN
     RAISE NOTICE 'OK!';
 END $$;
 
--- 6. Neteisingas buvimo vietos laikotarpis (CHECK)
+-- 6. Neteisingas buvimo vietos laikotarpis
 DO $$
 BEGIN
     INSERT INTO car_location (car_id, location_id, from_time, to_time)
@@ -62,7 +62,7 @@ EXCEPTION WHEN check_violation THEN
     RAISE NOTICE 'OK!';
 END $$;
 
--- 7. Pasikartojantis daugiareikšmio atributo įrašas (PK)
+-- 7. Pasikartojantis daugiareikšmio atributo įrašas
 DO $$
 BEGIN
     INSERT INTO client_category (client_id, category)
@@ -72,7 +72,7 @@ EXCEPTION WHEN unique_violation THEN
     RAISE NOTICE 'OK!';
 END $$;
 
--- 8. Neegzistuojantis klientas (FK)
+-- 8. Neegzistuojantis klientas
 DO $$
 BEGIN
     INSERT INTO client_category (client_id, category)
@@ -82,7 +82,7 @@ EXCEPTION WHEN foreign_key_violation THEN
     RAISE NOTICE 'OK!';
 END $$;
 
--- 9. Privalomas laukas negali būti NULL (NOT NULL)
+-- 9. Privalomas laukas negali būti NULL
 DO $$
 BEGIN
     INSERT INTO client (name, surname, email)
